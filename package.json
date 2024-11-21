@@ -1,0 +1,12 @@
+{
+  "name": "my-application",
+  "version": "1.0.0",
+  "description": "A simple application",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building the application!'"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {}
+}
