@@ -2,13 +2,16 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.8
     commands:
-      - echo Installing dependencies
-      - pip install -r requirements.txt -t .
+      - pip install --upgrade pip  # pip 최신 버전으로 업그레이드
+
   build:
     commands:
-      - echo Building the Lambda deployment package
-      - zip -r lambda_deployment.zip .
+      - pip install -r requirements.txt -t .  # requirements.txt에 명시된 라이브러리 설치
+      - zip -r function.zip .  # Lambda 배포 패키지 생성
+
 artifacts:
   files:
-    - lambda_deployment.zip
+    - function.zip  # 최종 배포 파일
