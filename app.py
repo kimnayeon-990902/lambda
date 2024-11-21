@@ -1,9 +1,11 @@
 import json
 
 def lambda_handler(event, context):
-    """
-    HTTP 요청을 처리하는 AWS Lambda 함수
-    """
+    return {
+        "statusCode": 200,
+        "body": "Hello, AWS Lambda!"
+    }
+
 
     # 들어오는 이벤트 로그
     print("Event:", event)
